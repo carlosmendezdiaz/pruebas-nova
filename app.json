@@ -1,0 +1,119 @@
+{
+  "version": "0.3",
+  "kind": "app",
+  "generatedAt": "2026-10-28T13:11:08.669Z",
+  "item": {
+    "title": "Pruebas_NOVA",
+    "subtitle": "Colombia precipitation probability map"
+  },
+  "map": {
+    "type": "webmap",
+    "path": "./map.json"
+  },
+  "app": {
+    "template": "nova-app",
+    "preset": "map",
+    "showHeader": false,
+    "theme": {
+      "mode": "dark",
+      "accent": "default"
+    },
+    "layout": {
+      "right": {
+        "hidden": false,
+        "width": "360px",
+        "title": "Identify",
+        "collapsed": false,
+        "blocks": [
+          {
+            "type": "customMount",
+            "id": "identify-results",
+            "title": "Identify point and grid"
+          }
+        ]
+      }
+    },
+    "widgets": [
+      {
+        "id": "home",
+        "type": "home",
+        "slot": "top-left",
+        "config": {}
+      },
+      {
+        "id": "legend",
+        "type": "legend",
+        "slot": "bottom-left",
+        "config": {}
+      },
+      {
+        "id": "default-layer-list",
+        "type": "layerList",
+        "slot": "top-right",
+        "config": {}
+      },
+      {
+        "id": "default-basemap-gallery",
+        "type": "basemapGallery",
+        "slot": "top-right",
+        "config": {}
+      }
+    ],
+    "interactions": [],
+    "behaviors": [
+      {
+        "id": "identify-point-grid",
+        "label": "Identify point and precipitation grid",
+        "bundlePath": "./runtime/behaviors/identify-point-grid-c0c2de7ab223b641.js",
+        "sourceSha256": "c0c2de7ab223b6414055519eff44426fe698b495ba122edecb9d2d127790a67c",
+        "modulePaths": [
+          "esri/Graphic",
+          "esri/geometry/Point",
+          "esri/geometry/Polygon",
+          "esri/geometry/operators/containsOperator",
+          "esri/geometry/operators/intersectsOperator",
+          "esri/geometry/operators/unionOperator"
+        ],
+        "config": {
+          "pointLayerId": "1a182dbc246-layer-4",
+          "countryLayerId": "1a182e36019-layer-7",
+          "gridLayerId": "colombia-10km-hex-precip-grid",
+          "probabilityField": "Probabilidad_de_precipitación",
+          "threshold": 50,
+          "cellKm": 10
+        },
+        "mounts": [
+          "identify-results"
+        ],
+        "ownedLayerIds": [],
+        "interactions": [
+          {
+            "id": "identify-map-click",
+            "trigger": {
+              "type": "map-click"
+            },
+            "actionId": "identify-at-location"
+          }
+        ],
+        "installedAt": "2026-10-28T14:52:06.122Z"
+      }
+    ]
+  },
+  "nova": {
+    "basename": "f217be10-b1bd-4361-8206-42ddd454fd40",
+    "presentationMode": "app",
+    "ownedGraphicsLayerIds": [],
+    "origin": {
+      "portalUrl": "https://www.arcgis.com",
+      "mapId": "output-8d490f51-5ff2-437b-bedd-72f28928635a",
+      "mapName": "New Conversation",
+      "viewMode": "2d",
+      "capturedAt": "2026-10-28T13:11:08.664Z"
+    },
+    "sourceSelection": {
+      "mode": "all"
+    },
+    "unsupportedLayers": [],
+    "degradedFeatures": []
+  }
+}

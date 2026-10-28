@@ -1,0 +1,791 @@
+{
+  "operationalLayers": [
+    {
+      "id": "1a182e36019-layer-7",
+      "opacity": 0.25,
+      "title": "World Countries",
+      "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/World_Countries/FeatureServer/0",
+      "visibility": false,
+      "itemId": "ac80670eb213440ea5899bbf92a04998",
+      "layerType": "ArcGISFeatureLayer",
+      "blendMode": "normal"
+    },
+    {
+      "id": "1a182dbc246-layer-4",
+      "title": "Pronóstico Meteorológico de Colombia (OpenWeather)",
+      "url": "https://services.arcgis.com/diQdIhSzjZP7X9B2/arcgis/rest/services/Pronostico_OpenWeatherMap/FeatureServer/0",
+      "visibility": true,
+      "itemId": "7a91d1ab9c614d7c98c3d2c3611af544",
+      "layerType": "ArcGISFeatureLayer",
+      "layerDefinition": {
+        "fieldConfigurations": [
+          {
+            "alias": "OBJECTID",
+            "name": "ObjectId"
+          },
+          {
+            "name": "Latitud",
+            "fieldFormat": {
+              "type": "number",
+              "maximumFractionDigits": 6,
+              "minimumFractionDigits": 6,
+              "useGrouping": "never"
+            }
+          },
+          {
+            "name": "Longitud",
+            "fieldFormat": {
+              "type": "number",
+              "maximumFractionDigits": 6,
+              "minimumFractionDigits": 6,
+              "useGrouping": "never"
+            }
+          },
+          {
+            "name": "F__Nubosidad",
+            "fieldFormat": {
+              "type": "number",
+              "useGrouping": "never"
+            }
+          },
+          {
+            "name": "Sensación_térmica___C_",
+            "fieldFormat": {
+              "type": "number",
+              "maximumFractionDigits": 6,
+              "minimumFractionDigits": 6,
+              "useGrouping": "never"
+            }
+          },
+          {
+            "name": "Humedad____",
+            "fieldFormat": {
+              "type": "number",
+              "useGrouping": "never"
+            }
+          },
+          {
+            "name": "M_S_N_M_",
+            "fieldFormat": {
+              "type": "number",
+              "useGrouping": "never"
+            }
+          },
+          {
+            "name": "Temperatura___C_",
+            "fieldFormat": {
+              "type": "number",
+              "maximumFractionDigits": 6,
+              "minimumFractionDigits": 6,
+              "useGrouping": "never"
+            }
+          },
+          {
+            "name": "Temperatura_máxima___C_",
+            "fieldFormat": {
+              "type": "number",
+              "maximumFractionDigits": 6,
+              "minimumFractionDigits": 6,
+              "useGrouping": "never"
+            }
+          },
+          {
+            "name": "Temperatura_mínima___C_",
+            "fieldFormat": {
+              "type": "number",
+              "maximumFractionDigits": 6,
+              "minimumFractionDigits": 6,
+              "useGrouping": "never"
+            }
+          },
+          {
+            "name": "Probabilidad_de_precipitación",
+            "fieldFormat": {
+              "type": "number",
+              "maximumFractionDigits": 6,
+              "minimumFractionDigits": 6,
+              "useGrouping": "never"
+            }
+          },
+          {
+            "name": "Velocidad_del_viento__m_s_",
+            "fieldFormat": {
+              "type": "number",
+              "maximumFractionDigits": 6,
+              "minimumFractionDigits": 6,
+              "useGrouping": "never"
+            }
+          },
+          {
+            "name": "Dirección_del_viento____",
+            "fieldFormat": {
+              "type": "number",
+              "useGrouping": "never"
+            }
+          },
+          {
+            "name": "Ráfaga_de_viento__m_s_",
+            "fieldFormat": {
+              "type": "number",
+              "maximumFractionDigits": 6,
+              "minimumFractionDigits": 6,
+              "useGrouping": "never"
+            }
+          },
+          {
+            "name": "Fecha",
+            "fieldFormat": {
+              "type": "date-time",
+              "dateStyle": "short",
+              "hour12": "always",
+              "timeStyle": "short"
+            }
+          }
+        ],
+        "drawingInfo": {
+          "renderer": {
+            "type": "simple",
+            "visualVariables": [
+              {
+                "type": "colorInfo",
+                "field": "Probabilidad_de_precipitación",
+                "legendOptions": {
+                  "title": "Precipitation probability"
+                },
+                "stops": [
+                  {
+                    "color": [
+                      255,
+                      255,
+                      0,
+                      255
+                    ],
+                    "label": "Lowest probability (0%)",
+                    "value": 0
+                  },
+                  {
+                    "color": [
+                      191,
+                      226,
+                      74,
+                      255
+                    ],
+                    "label": "25%",
+                    "value": 25
+                  },
+                  {
+                    "color": [
+                      94,
+                      198,
+                      167,
+                      255
+                    ],
+                    "label": "50%",
+                    "value": 50
+                  },
+                  {
+                    "color": [
+                      47,
+                      131,
+                      208,
+                      255
+                    ],
+                    "label": "75%",
+                    "value": 75
+                  },
+                  {
+                    "color": [
+                      8,
+                      48,
+                      107,
+                      255
+                    ],
+                    "label": "Highest probability (100%)",
+                    "value": 100
+                  }
+                ]
+              }
+            ],
+            "label": "Weather station / municipality forecast",
+            "symbol": {
+              "type": "esriSMS",
+              "color": [
+                255,
+                255,
+                0,
+                255
+              ],
+              "angle": 0,
+              "xoffset": 0,
+              "yoffset": 0,
+              "size": 9,
+              "style": "esriSMSCircle",
+              "outline": {
+                "type": "esriSLS",
+                "color": [
+                  31,
+                  41,
+                  55,
+                  255
+                ],
+                "width": 0.6,
+                "style": "esriSLSSolid"
+              }
+            }
+          }
+        }
+      },
+      "popupInfo": {
+        "popupElements": [
+          {
+            "type": "fields",
+            "fieldInfos": [
+              {
+                "fieldFormat": {
+                  "type": "number",
+                  "maximumFractionDigits": 0,
+                  "useGrouping": "never"
+                },
+                "fieldName": "OBJECTID",
+                "format": {
+                  "digitSeparator": false,
+                  "places": 0
+                },
+                "isEditable": false,
+                "label": "OBJECTID",
+                "visible": true
+              },
+              {
+                "fieldName": "Código_DIVIPOL",
+                "isEditable": true,
+                "label": "Código DIVIPOL",
+                "visible": true
+              },
+              {
+                "fieldFormat": {
+                  "type": "number",
+                  "maximumFractionDigits": 6,
+                  "minimumFractionDigits": 6,
+                  "useGrouping": "never"
+                },
+                "fieldName": "Latitud",
+                "format": {
+                  "digitSeparator": false,
+                  "places": 6
+                },
+                "isEditable": true,
+                "label": "Latitud",
+                "visible": true
+              },
+              {
+                "fieldFormat": {
+                  "type": "number",
+                  "maximumFractionDigits": 6,
+                  "minimumFractionDigits": 6,
+                  "useGrouping": "never"
+                },
+                "fieldName": "Longitud",
+                "format": {
+                  "digitSeparator": false,
+                  "places": 6
+                },
+                "isEditable": true,
+                "label": "Longitud",
+                "visible": true
+              },
+              {
+                "fieldName": "Región",
+                "isEditable": true,
+                "label": "Región",
+                "visible": true
+              },
+              {
+                "fieldName": "Departamento",
+                "isEditable": true,
+                "label": "Departamento",
+                "visible": true
+              },
+              {
+                "fieldName": "Municipio",
+                "isEditable": true,
+                "label": "Municipio",
+                "visible": true
+              },
+              {
+                "fieldFormat": {
+                  "type": "number",
+                  "maximumFractionDigits": 0,
+                  "useGrouping": "never"
+                },
+                "fieldName": "F__Nubosidad",
+                "format": {
+                  "digitSeparator": false,
+                  "places": 0
+                },
+                "isEditable": true,
+                "label": "% Nubosidad",
+                "visible": true
+              },
+              {
+                "fieldFormat": {
+                  "type": "number",
+                  "maximumFractionDigits": 6,
+                  "minimumFractionDigits": 6,
+                  "useGrouping": "never"
+                },
+                "fieldName": "Sensación_térmica___C_",
+                "format": {
+                  "digitSeparator": false,
+                  "places": 6
+                },
+                "isEditable": true,
+                "label": "Sensación térmica (°C)",
+                "visible": true
+              },
+              {
+                "fieldFormat": {
+                  "type": "number",
+                  "maximumFractionDigits": 0,
+                  "useGrouping": "never"
+                },
+                "fieldName": "Presión_atmosférica_a_nivel_del",
+                "format": {
+                  "digitSeparator": false,
+                  "places": 0
+                },
+                "isEditable": true,
+                "label": "Presión atmosférica a nivel del suelo (hPa)",
+                "visible": true
+              },
+              {
+                "fieldFormat": {
+                  "type": "number",
+                  "maximumFractionDigits": 0,
+                  "useGrouping": "never"
+                },
+                "fieldName": "Humedad____",
+                "format": {
+                  "digitSeparator": false,
+                  "places": 0
+                },
+                "isEditable": true,
+                "label": "Humedad (%)",
+                "visible": true
+              },
+              {
+                "fieldFormat": {
+                  "type": "number",
+                  "maximumFractionDigits": 0,
+                  "useGrouping": "never"
+                },
+                "fieldName": "Presión_atmosférica_sobre_el_ni",
+                "format": {
+                  "digitSeparator": false,
+                  "places": 0
+                },
+                "isEditable": true,
+                "label": "Presión atmosférica sobre el nivel del mar (hPa)",
+                "visible": true
+              },
+              {
+                "fieldFormat": {
+                  "type": "number",
+                  "maximumFractionDigits": 0,
+                  "useGrouping": "never"
+                },
+                "fieldName": "M_S_N_M_",
+                "format": {
+                  "digitSeparator": false,
+                  "places": 0
+                },
+                "isEditable": true,
+                "label": "M.S.N.M.",
+                "visible": true
+              },
+              {
+                "fieldFormat": {
+                  "type": "number",
+                  "maximumFractionDigits": 6,
+                  "minimumFractionDigits": 6,
+                  "useGrouping": "never"
+                },
+                "fieldName": "Temperatura___C_",
+                "format": {
+                  "digitSeparator": false,
+                  "places": 6
+                },
+                "isEditable": true,
+                "label": "Temperatura (°C)",
+                "visible": true
+              },
+              {
+                "fieldFormat": {
+                  "type": "number",
+                  "maximumFractionDigits": 6,
+                  "minimumFractionDigits": 6,
+                  "useGrouping": "never"
+                },
+                "fieldName": "Temperatura_máxima___C_",
+                "format": {
+                  "digitSeparator": false,
+                  "places": 6
+                },
+                "isEditable": true,
+                "label": "Temperatura máxima (°C)",
+                "visible": true
+              },
+              {
+                "fieldFormat": {
+                  "type": "number",
+                  "maximumFractionDigits": 6,
+                  "minimumFractionDigits": 6,
+                  "useGrouping": "never"
+                },
+                "fieldName": "Temperatura_mínima___C_",
+                "format": {
+                  "digitSeparator": false,
+                  "places": 6
+                },
+                "isEditable": true,
+                "label": "Temperatura mínima (°C)",
+                "visible": true
+              },
+              {
+                "fieldFormat": {
+                  "type": "number",
+                  "maximumFractionDigits": 6,
+                  "minimumFractionDigits": 6,
+                  "useGrouping": "never"
+                },
+                "fieldName": "Probabilidad_de_precipitación",
+                "format": {
+                  "digitSeparator": false,
+                  "places": 6
+                },
+                "isEditable": true,
+                "label": "Probabilidad de precipitación",
+                "visible": true
+              },
+              {
+                "fieldName": "Pronóstico_general",
+                "isEditable": true,
+                "label": "Pronóstico general",
+                "visible": true
+              },
+              {
+                "fieldName": "Pronóstico",
+                "isEditable": true,
+                "label": "Pronóstico",
+                "visible": true
+              },
+              {
+                "fieldFormat": {
+                  "type": "number",
+                  "maximumFractionDigits": 6,
+                  "minimumFractionDigits": 6,
+                  "useGrouping": "never"
+                },
+                "fieldName": "Velocidad_del_viento__m_s_",
+                "format": {
+                  "digitSeparator": false,
+                  "places": 6
+                },
+                "isEditable": true,
+                "label": "Velocidad del viento (m/s)",
+                "visible": true
+              },
+              {
+                "fieldFormat": {
+                  "type": "number",
+                  "maximumFractionDigits": 0,
+                  "useGrouping": "never"
+                },
+                "fieldName": "Dirección_del_viento____",
+                "format": {
+                  "digitSeparator": false,
+                  "places": 0
+                },
+                "isEditable": true,
+                "label": "Dirección del viento (°)",
+                "visible": true
+              },
+              {
+                "fieldFormat": {
+                  "type": "number",
+                  "maximumFractionDigits": 6,
+                  "minimumFractionDigits": 6,
+                  "useGrouping": "never"
+                },
+                "fieldName": "Ráfaga_de_viento__m_s_",
+                "format": {
+                  "digitSeparator": false,
+                  "places": 6
+                },
+                "isEditable": true,
+                "label": "Ráfaga de viento (m/s)",
+                "visible": true
+              },
+              {
+                "fieldName": "Fecha",
+                "isEditable": true,
+                "label": "Fecha",
+                "visible": true
+              }
+            ]
+          }
+        ],
+        "expressionInfos": [],
+        "fieldInfos": [
+          {
+            "fieldName": "OBJECTID",
+            "format": {
+              "digitSeparator": false,
+              "places": 0
+            },
+            "isEditable": false,
+            "label": "OBJECTID",
+            "visible": true
+          },
+          {
+            "fieldName": "Código_DIVIPOL",
+            "isEditable": true,
+            "label": "Código DIVIPOL",
+            "visible": true
+          },
+          {
+            "fieldName": "Latitud",
+            "format": {
+              "digitSeparator": false,
+              "places": 6
+            },
+            "isEditable": true,
+            "label": "Latitud",
+            "visible": true
+          },
+          {
+            "fieldName": "Longitud",
+            "format": {
+              "digitSeparator": false,
+              "places": 6
+            },
+            "isEditable": true,
+            "label": "Longitud",
+            "visible": true
+          },
+          {
+            "fieldName": "Región",
+            "isEditable": true,
+            "label": "Región",
+            "visible": true
+          },
+          {
+            "fieldName": "Departamento",
+            "isEditable": true,
+            "label": "Departamento",
+            "visible": true
+          },
+          {
+            "fieldName": "Municipio",
+            "isEditable": true,
+            "label": "Municipio",
+            "visible": true
+          },
+          {
+            "fieldName": "F__Nubosidad",
+            "format": {
+              "digitSeparator": false,
+              "places": 0
+            },
+            "isEditable": true,
+            "label": "% Nubosidad",
+            "visible": true
+          },
+          {
+            "fieldName": "Sensación_térmica___C_",
+            "format": {
+              "digitSeparator": false,
+              "places": 6
+            },
+            "isEditable": true,
+            "label": "Sensación térmica (°C)",
+            "visible": true
+          },
+          {
+            "fieldName": "Presión_atmosférica_a_nivel_del",
+            "format": {
+              "digitSeparator": false,
+              "places": 0
+            },
+            "isEditable": true,
+            "label": "Presión atmosférica a nivel del suelo (hPa)",
+            "visible": true
+          },
+          {
+            "fieldName": "Humedad____",
+            "format": {
+              "digitSeparator": false,
+              "places": 0
+            },
+            "isEditable": true,
+            "label": "Humedad (%)",
+            "visible": true
+          },
+          {
+            "fieldName": "Presión_atmosférica_sobre_el_ni",
+            "format": {
+              "digitSeparator": false,
+              "places": 0
+            },
+            "isEditable": true,
+            "label": "Presión atmosférica sobre el nivel del mar (hPa)",
+            "visible": true
+          },
+          {
+            "fieldName": "M_S_N_M_",
+            "format": {
+              "digitSeparator": false,
+              "places": 0
+            },
+            "isEditable": true,
+            "label": "M.S.N.M.",
+            "visible": true
+          },
+          {
+            "fieldName": "Temperatura___C_",
+            "format": {
+              "digitSeparator": false,
+              "places": 6
+            },
+            "isEditable": true,
+            "label": "Temperatura (°C)",
+            "visible": true
+          },
+          {
+            "fieldName": "Temperatura_máxima___C_",
+            "format": {
+              "digitSeparator": false,
+              "places": 6
+            },
+            "isEditable": true,
+            "label": "Temperatura máxima (°C)",
+            "visible": true
+          },
+          {
+            "fieldName": "Temperatura_mínima___C_",
+            "format": {
+              "digitSeparator": false,
+              "places": 6
+            },
+            "isEditable": true,
+            "label": "Temperatura mínima (°C)",
+            "visible": true
+          },
+          {
+            "fieldName": "Probabilidad_de_precipitación",
+            "format": {
+              "digitSeparator": false,
+              "places": 6
+            },
+            "isEditable": true,
+            "label": "Probabilidad de precipitación",
+            "visible": true
+          },
+          {
+            "fieldName": "Pronóstico_general",
+            "isEditable": true,
+            "label": "Pronóstico general",
+            "visible": true
+          },
+          {
+            "fieldName": "Pronóstico",
+            "isEditable": true,
+            "label": "Pronóstico",
+            "visible": true
+          },
+          {
+            "fieldName": "Velocidad_del_viento__m_s_",
+            "format": {
+              "digitSeparator": false,
+              "places": 6
+            },
+            "isEditable": true,
+            "label": "Velocidad del viento (m/s)",
+            "visible": true
+          },
+          {
+            "fieldName": "Dirección_del_viento____",
+            "format": {
+              "digitSeparator": false,
+              "places": 0
+            },
+            "isEditable": true,
+            "label": "Dirección del viento (°)",
+            "visible": true
+          },
+          {
+            "fieldName": "Ráfaga_de_viento__m_s_",
+            "format": {
+              "digitSeparator": false,
+              "places": 6
+            },
+            "isEditable": true,
+            "label": "Ráfaga de viento (m/s)",
+            "visible": true
+          },
+          {
+            "fieldName": "Fecha",
+            "isEditable": true,
+            "label": "Fecha",
+            "visible": true
+          }
+        ],
+        "title": "{Código_DIVIPOL}"
+      },
+      "blendMode": "normal"
+    }
+  ],
+  "baseMap": {
+    "baseMapLayers": [
+      {
+        "id": "dark-gray-base-layer",
+        "opacity": 1,
+        "title": "Dark Gray Base",
+        "visibility": true,
+        "layerType": "VectorTileLayer",
+        "styleUrl": "https://cdn.arcgis.com/sharing/rest/content/items/5e9b3685f4c24d8781073dd928ebda50/resources/styles/root.json"
+      },
+      {
+        "id": "dark-gray-reference-layer",
+        "opacity": 1,
+        "title": "Dark Gray Reference",
+        "visibility": true,
+        "layerType": "VectorTileLayer",
+        "styleUrl": "https://cdn.arcgis.com/sharing/rest/content/items/747cb7a5329c478cbe6981076cc879c5/resources/styles/root.json",
+        "isReference": true
+      }
+    ],
+    "title": "Lona gris oscuro"
+  },
+  "authoringApp": "ArcGIS API for JavaScript",
+  "authoringAppVersion": "5.1",
+  "spatialReference": {
+    "latestWkid": 3857,
+    "wkid": 102100
+  },
+  "timeZone": "system",
+  "version": "2.37",
+  "initialState": {
+    "viewpoint": {
+      "targetGeometry": {
+        "spatialReference": {
+          "latestWkid": 3857,
+          "wkid": 102100
+        },
+        "xmin": -9095592.766195083,
+        "ymin": -467782.55299339053,
+        "xmax": -7454364.985633534,
+        "ymax": 1502401.8877650308
+      }
+    }
+  }
+}
