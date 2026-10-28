@@ -22,13 +22,18 @@
       "right": {
         "hidden": false,
         "width": "360px",
-        "title": "Identify",
+        "title": "Identificación",
         "collapsed": false,
         "blocks": [
           {
             "type": "customMount",
             "id": "identify-results",
-            "title": "Identify point and grid"
+            "title": "Identificar punto y cuadrícula"
+          },
+          {
+            "type": "customMount",
+            "id": "precip-trend-chart",
+            "title": "Tendencia de lluvia"
           }
         ]
       }
@@ -62,10 +67,32 @@
     "interactions": [],
     "behaviors": [
       {
+        "id": "precip-trend-by-extent",
+        "label": "Tendencia de probabilidad de lluvia por extensión",
+        "bundlePath": "./runtime/behaviors/precip-trend-by-extent-9cea88fc1aa924e8.js",
+        "sourceSha256": "9cea88fc1aa924e8f1e2f36be4cd00d88be7fadb987e8703797e4fd6cbfc43c4",
+        "modulePaths": [
+          "esri/core/reactiveUtils"
+        ],
+        "config": {
+          "pointLayerId": "1a182dbc246-layer-4",
+          "probabilityField": "Probabilidad_de_precipitación",
+          "featuresPerForecastStep": 1128,
+          "shortWindowPeriods": 2,
+          "longWindowPeriods": 32
+        },
+        "mounts": [
+          "precip-trend-chart"
+        ],
+        "ownedLayerIds": [],
+        "interactions": [],
+        "installedAt": "2026-10-28T15:48:50.702Z"
+      },
+      {
         "id": "identify-point-grid",
-        "label": "Identify point and precipitation grid",
-        "bundlePath": "./runtime/behaviors/identify-point-grid-c0c2de7ab223b641.js",
-        "sourceSha256": "c0c2de7ab223b6414055519eff44426fe698b495ba122edecb9d2d127790a67c",
+        "label": "Identificar punto y cuadrícula de precipitación",
+        "bundlePath": "./runtime/behaviors/identify-point-grid-5428c3fbdbb1884c.js",
+        "sourceSha256": "5428c3fbdbb1884c890a18b8e82a1703be11a29008801abdd96b6aaea6183bb4",
         "modulePaths": [
           "esri/Graphic",
           "esri/geometry/Point",
@@ -92,10 +119,10 @@
             "trigger": {
               "type": "map-click"
             },
-            "actionId": "identify-at-location"
+            "actionId": "identificar-en-ubicacion"
           }
         ],
-        "installedAt": "2026-10-28T14:52:06.122Z"
+        "installedAt": "2026-10-28T15:52:21.125Z"
       }
     ]
   },
